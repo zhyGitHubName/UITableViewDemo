@@ -4,7 +4,7 @@
 //
 //  Created by jeez on 2017/4/21.
 //  Copyright © 2017年 jeez. All rights reserved.
-//
+//  哈哈哈123
 
 #import "ViewController.h"
 #import "Group.h"
@@ -28,7 +28,7 @@
     tableView1.delegate = self;
     tableView1.dataSource = self;
     [self.view addSubview:tableView1];
-    
+//    self.view.backgroundColor = [UIColor orangeColor];
     UIView *headview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 375, 50)];
     headview.backgroundColor = [[UIColor orangeColor]colorWithAlphaComponent:0.5];
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 300, 20)];
