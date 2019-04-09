@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.title = @"UITableView";
     tableView1 = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, 375, 603) style:UITableViewStyleGrouped];
     tableView1.delegate = self;
     tableView1.dataSource = self;
@@ -31,8 +31,8 @@
 //    self.view.backgroundColor = [UIColor orangeColor];
     UIView *headview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 375, 50)];
     headview.backgroundColor = [[UIColor orangeColor]colorWithAlphaComponent:0.5];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 300, 20)];
-    label.text = @"duantou";
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 15, 300, 20)];
+    label.text = @"段头视图";
     label.textAlignment = NSTextAlignmentLeft;
     [headview addSubview:label];
     
@@ -97,10 +97,11 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    
+
     SelectViewController *selectVC = [[SelectViewController alloc]init];
     selectVC.indexPath = indexPath;
-    [self presentViewController:selectVC animated:YES completion:nil];
-    
+    [self.navigationController pushViewController:selectVC animated:YES];
 
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -170,12 +171,12 @@
 
     UIView *footview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 375, 40)];
     footview.tag = 200+section;
-    footview.backgroundColor = [UIColor blueColor];
+    footview.backgroundColor = [UIColor whiteColor];
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(foottapgr:)];
     footview.userInteractionEnabled = YES;
     [footview addGestureRecognizer:tap1];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, 100, 20)];
-    label.backgroundColor = [UIColor redColor];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, 200, 20)];
+//    label.backgroundColor = [UIColor redColor];
     label.text = @"添加tableviewcell";
     label.textColor = [UIColor blackColor];
     label.textAlignment = NSTextAlignmentLeft;

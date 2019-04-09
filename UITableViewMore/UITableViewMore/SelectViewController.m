@@ -24,15 +24,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"dianji" forState:UIControlStateNormal];
-    button.frame = CGRectMake(50, 300, 100, 30);
+    [button setTitle:@"点击视图动画" forState:UIControlStateNormal];
+    button.frame = CGRectMake(50, 300, 200, 30);
+    button.center = CGPointMake(self.view.frame.size.width/2, 315);
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(btnclick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
     NSString *str = @"";
     
-    view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 375, 10)];
+    view = [[UIView alloc]initWithFrame:CGRectMake(0, 64, 375, 20)];
     view.backgroundColor = [UIColor greenColor];
     [self.view addSubview:view];
    
@@ -45,7 +46,7 @@
     button.selected = !button.selected;
     if (button.selected) {
         [UIView animateWithDuration:2 animations:^{
-            view.frame = CGRectMake(0, 0, 375, 100);
+            view.frame = CGRectMake(0, 64, 375, 100);
             label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
             label.text = @"this is a good time in life";
             label.textColor = [UIColor redColor];
@@ -54,7 +55,7 @@
         }];
     }else{
         [UIView animateWithDuration:2 animations:^{
-            view.frame = CGRectMake(0, 0, 375, 0);
+            view.frame = CGRectMake(0, 64, 375, 0);
             for (UIView *view1 in view.subviews) {
                 [view1 removeFromSuperview];
             }
@@ -78,7 +79,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 - (void)didReceiveMemoryWarning {
