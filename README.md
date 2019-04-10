@@ -1,7 +1,7 @@
 # UITableViewDemo
 Demo:UITableView分段加载功能
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
-
+![Image text](https://github.com/zhyGitHubName/UITableViewDemo/blob/master/img-folder/shouye.png)
+![Image text](https://github.com/zhyGitHubName/UITableViewDemo/blob/master/img-folder/haha.png)
 
 
 
